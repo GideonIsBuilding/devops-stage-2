@@ -12,7 +12,7 @@ RUN poetry install
 
 COPY . .
 
-RUN chmod +x /app/prestart.sh
+RUN chmod +x /app/backend/prestart.sh
 
 EXPOSE 8000
 
