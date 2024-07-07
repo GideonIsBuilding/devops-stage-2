@@ -1,9 +1,9 @@
 #-----------------
 # Building the app
 #-----------------
-FROM node:17-alpine As build
+FROM node:17-alpine AS build
 
-WORKDIR /app
+WORKDIR /app/frontend
 
 COPY package*.json ./
 
@@ -26,4 +26,4 @@ COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 
-CMD [ "ngix", "-g", "daemon off;" ]
+CMD [ "ngnix", "-g", "daemon off;" ]
