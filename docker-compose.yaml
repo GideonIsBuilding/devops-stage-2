@@ -57,9 +57,8 @@ services:
     restart: always
     ports:
       - "80:80"
-      - "81:81"
+      - "8090:81"
       - "443:443"
-      - "8090:8090"
     environment:
       DB_SQLITE_FILE: "/data/database.sqlite"
     volumes:
